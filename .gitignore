@@ -1,0 +1,11 @@
+/build/*
+/node_modules/*
+/typings/*
+/.vscode/*
+/test/*
+/coverage/*
+/typedoc/*
+npm-debug.log
+yarn.lock
+yarn-error.log
+package-lock.json

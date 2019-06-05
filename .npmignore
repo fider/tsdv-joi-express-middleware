@@ -1,0 +1,17 @@
+/.git/*
+/.vscode/*
+/coverage/*
+/node_modules/*
+/source/*
+/spec/*
+/typings/*
+/test/*
+/typedoc/*
+.gitignore
+gulpfile.js
+Jenkinsfile
+tsconfig.json
+tslint.json
+typings.json
+yarn.lock
+package-lock.json
