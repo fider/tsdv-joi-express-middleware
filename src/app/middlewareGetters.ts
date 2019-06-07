@@ -1,4 +1,4 @@
-import { Validator, ValidationError } from 'tsdv-joi';
+import { Validator } from 'tsdv-joi';
 import express = require('express');
 import { inspect } from 'util';
 import { NextFunction, Request, Response } from 'express';
@@ -101,8 +101,7 @@ export function validate<T>(paramGroup: "body" | "query" | string, clazz: new ()
 
         let err = result.error;
         if (err) {
-            console.log(`\n\nERROR   (${ValidationError.toString()})    ${err}\n\n`);
-            if (err instanceof ValidationError) {
+            if (err.name === 'ValidationError') {
                 // 400
                 return next(new HttpError(`Validation of request ${paramGroup}. ${err}`, 400));
             }

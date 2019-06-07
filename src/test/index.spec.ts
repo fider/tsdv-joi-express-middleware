@@ -27,8 +27,8 @@ describe(`validateBody()`, () => {
         // {isValid: true, data: {email: 'abc@def.com'}},
         // {isValid: true, data: {email: 'hahsdhfas@sdofawe.pl'}},
 
-        {isValid: true, data: {email: ' ', surname: 'too short'}},
-        // {isValid: false, data: {email: 'abcdef.com'}},
+        {isValid: false, data: {email: ' ', surname: 'too short'}},
+        {isValid: false, data: {email: 'abcdef.com', surname: '1234567890'}},
     ];
     testTJEM(UserClass, testData, 'body');
 

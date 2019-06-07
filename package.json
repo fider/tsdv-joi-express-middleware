@@ -11,11 +11,12 @@
   },
   "scripts": {
     "build": "rm -rf ./lib && tsc -p tsconfig.json",
+    "build:publish": "rm -rf ./lib && tsc -p tsconfig.json --sourceMap false",
     "test": "jest",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "tsdv-joi": "file:../fider-tsdv-joi"
+    "tsdv-joi": "fider/old-stable-tsdv-joi"
   },
   "__recommended": "Recommended devDependencies for local-tsdv-joi:    npm i -D @hapi/joi@15.0.1 @types/hapi__joi@15.0.1",
   "devDependencies": {
